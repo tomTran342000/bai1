@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login2</title>
+	<link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet">		<!-- link font chữ -->
+	<link rel="stylesheet" type="text/css" href="icon-font/font-awesome/css/font-awesome.min.css">		<!-- đương dẫn đến icon-font, để có thể gọi icon ra -->
+	<meta charset="utf-8">
+	<style type="text/css">
+		body{
+			margin:0px;
+			padding:0px;
+			background: url(imgg/erik-mclean-lqs4zehTcrk-unsplash.jpg);
+			background-size: cover;	
+
+		}
+		.main{
+			display: grid;									/* Định nghĩa một Grid */
+			grid-template-columns: repeat(12,1fr);			/* Tạo các cột	repeat(12,1fr) = 12 cột với độ lớn 1fr */
+			grid-template-rows: minmax(100px,auto);			/* Tạo các dòng minmax(100px,auto) = 2 dòng với dòng đầu tiên min=100px và dòng thứ 2 auto */
+		}
+		.form{
+			grid-column: 6/9;								/* di chuyển phần tử đến ứng với bắt đầu cột thứ 6 và kết thúc ở cột thứ 9 = 6/9 */
+			grid-row: 2/3;									/* di chuyển phần tử đến ứng với bắt đầu dòng thứ 2 và kết thúc ở dòng thứ 3 = 2/3 */
+			height: 490px;
+			width: 330px;
+			display: flex;									/* sắp xếp ngang hàng */
+			flex-direction: column;							/*	nhưng theo trục đứng xuôi */
+			align-items: center;
+			border-radius: 15px;
+			box-shadow: 0px 0px 14px 0px black;				/* tạo độ bóng */
+			background:rgba(0,0,0,0.7); 
+			position: relative;								/* lấy thằng form làm chuẩn để căn chỉnh vị trí */
+		}
+		h2{
+			margin-top: 50px;
+			margin-bottom: 30px;
+			color: #ecf0f1;
+			font-family: 'Poiret One', cursive;
+			font-size: 40px;
+		}
+	
+		input{
+			display: block;									/* khóa lại */
+			margin-top: 6px;
+			margin-bottom: 10px;
+			border: none;
+			background: transparent;
+			border-bottom: 1px solid #ecf0f1;
+			color: #ecf0f1;
+
+		}
+		input[type="text"]{
+			padding-bottom: 15px;
+			width: 230px;
+			font-family: 'Poiret One', cursive;
+			font-size: 17px;
+			color: #c8d6e5;
+			
+		}
+
+		.sub{
+			margin-top: 10px;
+			padding:6px;
+			width: 250px;
+			border-radius: 3px;
+			border: 1px solid #ecf0f1;
+			cursor: pointer;
+			background:#ff6b6b;
+			color: #fff;
+			font-family: 'Poiret One', cursive;
+			font-size: 19px;
+			opacity: 0.65;	
+		}
+		a{
+			color:#f0932b;
+			margin-top:10px;
+			text-decoration: none;
+		}
+
+		.subWithIcon1 input[type="submit"]{
+			border:1px;
+			background: #425F9C;
+			cursor: pointer;
+			font-family: 'Poiret One', cursive;
+			width: 160px;
+			padding:6px;
+			padding-left: 15px;
+			font-size: 18px;
+			color: #ecf0f1;
+		
+		}
+		.subWithIcon1{
+			position: relative;							/* lấy subWithIcon1 làm chuẩn */
+		}
+		
+
+		.subWithIcon1 i{
+			position: absolute;							/* dựa vào  subWithIcon1 làm chuẩn mà căn chỉnh vị trí cho icon */
+			top:15px;
+			padding-left: 15px;
+			color: #fff;
+
+		}
+
+		.subWithIcon2 input[type="submit"]{
+			border:1px;
+			background: #00a8ff;
+			cursor: pointer;
+			font-family: 'Poiret One', cursive;
+			width: 160px;
+			padding:6px;
+			padding-left: 15px;
+			font-size: 18px;
+			color: #ecf0f1;
+		}
+
+		.subWithIcon2{
+			position: relative;
+		}
+		
+
+		.subWithIcon2 i{
+			position: absolute;
+			top:15px;
+			padding-left: 15px;
+			color: #fff;
+
+		}
+
+
+		.footer {
+			display: grid;
+			grid-template-columns: repeat(1,auto);
+		}
+		.end p{
+			padding-left: 790px;
+		}
+		.end {
+			position: relative;
+		}
+		.end i{
+			position: absolute;
+			left: 770px;
+			top:15px;
+		} 
+	/*	.main{
+			position: relative;
+		}
+		.footer .end p {
+			position: absolute;
+			left: 790px;
+		}
+
+		.footer .end i {
+			position: absolute;
+			left: 770px;
+			top:605px;
+		} */
+
+
+	</style>
+</head>
+<body>
+	<div class="main">
+		<div class="form">
+
+				<h2>Register</h2>
+				<input type="text" name="" placeholder="Full name" >
+				<input type="text" name="" placeholder="Phone number">
+				<input type="text" name="" placeholder="Email" >
+				<a href="ff">Move to Log In!</a>
+				<input type="submit" name="" value="Register" class="sub">
+
+			<div class=subWithIcon1>
+				<input type="submit" name="" value="Facebook">
+				<i class="fa fa-facebook-official fa-1g" aria-hidden="true"></i>
+			</div>	
+
+			<div class=subWithIcon2>
+				<input type="submit" name="" value="Twitter">
+				<i class="fa fa-twitter-square fa-1g" aria-hidden="true"></i>
+			</div>	
+
+		</div>
+
+	</div>
+
+	<div class="footer">
+		<div class="end">
+			<p>2020 Fox Roadster Register Form | Design by VuHoang </p>
+			<i class="fa fa-star fa-1g" aria-hidden="true"></i>
+		</div>
+	</div>
+
+</body>
+</html>
